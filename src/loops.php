@@ -2,6 +2,8 @@
 <html>
   <head>
     <title>Looping php</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500" rel="stylesheet">
   </head>
   <body>
     <h1>TV shows</h1>
