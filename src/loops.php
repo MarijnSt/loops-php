@@ -18,7 +18,7 @@
           $shows = [
             ["tv-show" => "Peaky Blinders", "rating" => 5],
             ["tv-show" => "Breaking Bad", "rating" => 5],
-            ["tv-show" => "Game Of Thrones", "rating" => 0],
+            ["tv-show" => "Game Of Thrones", "rating" => 1],
             ["tv-show" => "South Park", "rating" => 4]
           ];
         ?>
@@ -34,7 +34,12 @@
         	<td><a href=<?php echo ($url); ?>>
             <?php echo $arr["tv-show"]; ?>
           </a></td>
-        	<td><?php echo $arr["rating"]; ?></td>
+        	<td>
+          <!-- sterren laten zien -->
+            <?php  for($i = 0; $i < $arr["rating"]; $i++): ?>
+              <img src="https://image.flaticon.com/icons/svg/118/118669.svg" alt="star" height="15">
+            <?php endfor;?>
+          </td>
         </tr>
         <?php endforeach; ?>
       </tbody>
