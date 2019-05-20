@@ -13,6 +13,7 @@
         </tr>
       </thead>
       <tbody>
+        <!-- array van series -->
         <?php
           $shows = [
             ["tv-show" => "Peaky Blinders", "rating" => 5],
@@ -22,9 +23,17 @@
           ];
         ?>
 
+        <!-- url samenstellen -->
         <?php foreach($shows as $arr): ?>
+          <?php
+            $url = "https://www.google.com/search?q=" . str_replace(" ", "-", $arr["tv-show"]);
+          ?>
+
+        <!-- tabel opvullen -->
         <tr>
-        	<td><?php echo $arr["tv-show"]; ?></td>
+        	<td><a href=<?php echo ($url); ?>>
+            <?php echo $arr["tv-show"]; ?>
+          </a></td>
         	<td><?php echo $arr["rating"]; ?></td>
         </tr>
         <?php endforeach; ?>
